@@ -483,34 +483,17 @@ img {
     50% { opacity: 0.4; transform: scale(0.7); }
 }
 
-.hero-title-wrap {
-    margin-bottom: 1.5rem;
-}
-
 .hero-title {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
     color: var(--cream);
-    line-height: 1.05;
+    line-height: 1.15;
     font-weight: 600;
-    margin: 0;
-}
-
-.hero-title-italic {
-    font-style: italic;
-}
-
-.title-line {
-    display: block;
-}
-
-.title-outline {
-    -webkit-text-stroke: 1.5px var(--cream);
-    color: transparent;
-    font-size: clamp(3.5rem, 7vw, 6rem);
+    margin-bottom: 1.5rem;
 }
 
 .accent-text {
     color: var(--gold);
+    font-style: italic;
 }
 
 /* Ornamental divider */
@@ -527,15 +510,10 @@ img {
     background: linear-gradient(to right, var(--gold), transparent);
 }
 
-.orn-icon {
+.orn-leaf {
     color: var(--gold);
-    font-size: 0.8rem;
-    animation: ornSpin 4s linear infinite;
-}
-
-@keyframes ornSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    font-size: 1rem;
+    opacity: 0.7;
 }
 
 .hero-tagline {
@@ -643,19 +621,26 @@ img {
     100% { transform: rotate(360deg); }
 }
 
-.hero-food-img {
-    width: 130%;
-    max-width: 550px;
-    object-fit: contain;
+.hero-food-blob {
     position: relative;
     z-index: 5;
-    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
+    width: 400px;
+    height: 400px;
+    clip-path: path('M200,10 C300,-10 410,60 390,160 C420,260 370,370 270,390 C170,420 50,380 20,280 C-20,180 80,30 200,10 Z');
+    overflow: hidden;
     animation: heroFloat 6s ease-in-out infinite;
+}
+
+.hero-food-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.95);
 }
 
 @keyframes heroFloat {
     0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-25px) rotate(3deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
 }
 
 /* --- Floating Info Cards --- */
