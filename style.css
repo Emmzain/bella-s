@@ -1307,9 +1307,16 @@ footer {
     color: var(--green-dark);
 }
 
+.footer-socials svg,
 .footer-socials i {
     width: 18px;
     height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials a:hover svg,
+.footer-socials a:hover i {
+    transform: scale(1.15);
 }
 
 .footer-col h4 {
