@@ -35,35 +35,105 @@
 
     <!-- ═══════════════ HERO ═══════════════ -->
     <header id="home" class="hero section-reveal">
-        <div class="hero-overlay"></div>
-        <div class="hero-particles" id="hero-particles"></div>
+        <!-- Layered backgrounds -->
+        <div class="hero-bg-layer"></div>
+        <div class="hero-grain"></div>
+        <div class="hero-vignette"></div>
+
+        <!-- Animated decorative lines -->
+        <div class="hero-deco-lines">
+            <div class="deco-line deco-line-1"></div>
+            <div class="deco-line deco-line-2"></div>
+            <div class="deco-line deco-line-3"></div>
+        </div>
+
+        <!-- Floating food orbit -->
+        <div class="hero-orbit" id="hero-orbit">
+            <div class="orbit-ring ring-1">
+                <img src="pizza.png" alt="" class="orbit-food of-1">
+                <img src="steak.png" alt="" class="orbit-food of-2">
+            </div>
+            <div class="orbit-ring ring-2">
+                <img src="pasta.png" alt="" class="orbit-food of-3">
+                <img src="dessert.png" alt="" class="orbit-food of-4">
+            </div>
+        </div>
+
+        <!-- Steam / smoke wisps -->
+        <div class="hero-smoke">
+            <div class="smoke-wisp w1"></div>
+            <div class="smoke-wisp w2"></div>
+            <div class="smoke-wisp w3"></div>
+        </div>
+
+        <!-- Main content -->
         <div class="hero-content">
             <div class="hero-left">
-                <div class="hero-badge fade-in-up">EST. 2014 • HARIPUR</div>
-                <h1 class="hero-title fade-in-up delay-1">
-                    Crafted With Love.<br>
-                    <span class="accent-text">Served With Passion.</span>
-                </h1>
+                <div class="hero-badge fade-in-up">
+                    <span class="badge-dot"></span> EST. 2014 &bull; HARIPUR
+                </div>
+
+                <div class="hero-title-wrap">
+                    <h1 class="hero-title fade-in-up delay-1">
+                        <span class="title-line">Crafted With</span>
+                        <span class="title-line title-outline">Love.</span>
+                    </h1>
+                    <h1 class="hero-title hero-title-italic fade-in-up delay-2">
+                        <span class="title-line accent-text">Served With</span>
+                        <span class="title-line accent-text">Passion.</span>
+                    </h1>
+                </div>
+
+                <!-- Ornamental divider -->
+                <div class="hero-ornament fade-in-up delay-2">
+                    <span class="orn-line"></span>
+                    <span class="orn-icon">✦</span>
+                    <span class="orn-line"></span>
+                </div>
+
                 <p class="hero-tagline fade-in-up delay-2">Burgers &bull; Pizza &bull; Steaks &bull; Pasta & More</p>
+
                 <div class="hero-cta fade-in-up delay-3">
-                    <a href="#menu" class="btn-primary">Explore Menu</a>
+                    <a href="#menu" class="btn-primary btn-glow">
+                        <span>Explore Menu</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
                     <a href="#contact" class="btn-outline">Reserve Table</a>
                 </div>
             </div>
+
             <div class="hero-right fade-in-up delay-2">
-                <div class="hero-img-frame">
-                    <img src="burger.png" alt="Signature Burger" class="hero-food-img" id="hero-img">
+                <!-- Central food showcase -->
+                <div class="hero-showcase">
+                    <div class="showcase-glow"></div>
+                    <div class="showcase-ring showcase-ring-outer"></div>
+                    <div class="showcase-ring showcase-ring-inner"></div>
+                    <img src="burger.png" alt="Signature Smash Beef" class="hero-food-img" id="hero-img">
                 </div>
-                <div class="hero-floating-badge">
-                    <span class="hf-number">4.8</span>
-                    <span class="hf-stars">★★★★★</span>
-                    <span class="hf-text">Google Rating</span>
+
+                <!-- Floating info cards -->
+                <div class="hero-info-card hic-rating">
+                    <span class="hic-num">4.8</span>
+                    <span class="hic-stars">★★★★★</span>
+                    <span class="hic-label">Google Rating</span>
+                </div>
+                <div class="hero-info-card hic-delivery">
+                    <i data-lucide="clock-3"></i>
+                    <span class="hic-label">30 Min Delivery</span>
+                </div>
+                <div class="hero-info-card hic-items">
+                    <span class="hic-num">50+</span>
+                    <span class="hic-label">Menu Items</span>
                 </div>
             </div>
         </div>
+
+        <!-- Bottom scroll indicator -->
         <div class="hero-scroll-indicator fade-in-up delay-3">
-            <div class="scroll-line"></div>
-            <span>Scroll Down</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
         </div>
     </header>
 

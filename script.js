@@ -84,21 +84,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ═══════════ 5. HERO PARALLAX ═══════════
     const hero = document.querySelector('.hero');
-    const heroOverlay = document.querySelector('.hero-overlay');
+    const heroBgLayer = document.querySelector('.hero-bg-layer');
     const heroImg = document.querySelector('.hero-food-img');
+    const heroOrbit = document.getElementById('hero-orbit');
 
     if (hero) {
         hero.addEventListener('mousemove', (e) => {
             const x = (window.innerWidth / 2 - e.pageX) / 30;
             const y = (window.innerHeight / 2 - e.pageY) / 30;
 
-            if (heroOverlay) heroOverlay.style.transform = `translate(${x}px, ${y}px)`;
-            if (heroImg) heroImg.style.transform = `translate(${-x * 1.5}px, ${-y * 1.5}px)`;
+            if (heroBgLayer) heroBgLayer.style.transform = `translate(${x * 0.5}px, ${y * 0.5}px)`;
+            if (heroImg) heroImg.style.transform = `translate(${-x * 1.8}px, ${-y * 1.8}px)`;
+            if (heroOrbit) heroOrbit.style.transform = `translateY(-50%) translate(${x * 0.8}px, ${y * 0.8}px)`;
         });
 
         hero.addEventListener('mouseleave', () => {
-            if (heroOverlay) heroOverlay.style.transform = 'translate(0, 0)';
+            if (heroBgLayer) heroBgLayer.style.transform = 'translate(0, 0)';
             if (heroImg) heroImg.style.transform = 'translate(0, 0)';
+            if (heroOrbit) heroOrbit.style.transform = 'translateY(-50%) translate(0, 0)';
         });
     }
 
