@@ -1371,26 +1371,25 @@ footer {
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.12;
+    opacity: 0.45;
     background-image:
-        /* Burger sketch (Rotated 18deg) */
+        /* Row 1 */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg transform='rotate(18 50 50)'%3E%3Cpath d='M25,50 C25,30 75,30 75,50 L75,54 C75,56 25,56 25,54Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3Cpath d='M20,57 L80,57 L75,67 L25,67Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3Cpath d='M28,48 Q50,42 72,48' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cellipse cx='38' cy='52' rx='3' ry='1.5' fill='none' stroke='%23C9A96E' stroke-width='0.8'/%3E%3Cellipse cx='58' cy='52' rx='3' ry='1.5' fill='none' stroke='%23C9A96E' stroke-width='0.8'/%3E%3C/g%3E%3C/svg%3E"),
-        /* Pizza sketch (Rotated -35deg) */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg transform='rotate(-35 50 50)'%3E%3Cpath d='M50,15 L85,75 Q50,90 15,75Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3Ccircle cx='42' cy='50' r='4' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Ccircle cx='58' cy='60' r='3.5' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Ccircle cx='35' cy='65' r='3' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E"),
-        /* Fork & knife (Rotated 45deg) */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='100' viewBox='0 0 80 100'%3E%3Cg transform='rotate(45 40 50)'%3E%3Cpath d='M30,15 L30,45 Q30,52 35,52 L35,85' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M22,15 L22,38' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M30,15 L30,38' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M38,15 L38,38' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M50,15 L47,50 L50,52 L50,85' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3C/g%3E%3C/svg%3E"),
-        /* Drink glass (Rotated -15deg) */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='100' viewBox='0 0 80 100'%3E%3Cg transform='rotate(-15 40 50)'%3E%3Cpath d='M25,15 L20,65 Q20,75 40,75 Q60,75 55,65 L50,15Z' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M40,75 L40,88' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M30,88 L50,88' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M28,22 Q40,28 52,22' fill='none' stroke='%23C9A96E' stroke-width='0.8'/%3E%3Ccircle cx='32' cy='35' r='3' fill='none' stroke='%23C9A96E' stroke-width='0.6'/%3E%3Ccircle cx='45' cy='42' r='2' fill='none' stroke='%23C9A96E' stroke-width='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-        /* Chef Hat (Rotated -25deg) */
+        /* Row 2 */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg transform='rotate(-25 50 50)'%3E%3Cpath d='M30,70 L70,70 L65,80 L35,80 Z' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M30,70 C20,65 15,40 35,40 C35,30 65,30 65,40 C85,40 80,65 70,70' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E"),
-        /* Chili Pepper (Rotated 55deg) */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg transform='rotate(55 40 40)'%3E%3Cpath d='M40,15 C45,15 42,20 40,25 Q35,45 55,55 C65,60 55,68 45,65 Q25,60 30,35 Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3Cpath d='M40,15 Q43,8 35,5' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E"),
-        /* Cupcake/Dessert (Rotated -20deg) */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg transform='rotate(-20 45 45)'%3E%3Cpath d='M25,50 L65,50 L58,75 L32,75 Z' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M22,50 Q45,35 68,50 C75,40 65,25 45,25 C25,25 15,40 22,50' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3Ccircle cx='45' cy='20' r='3.5' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E"),
-        /* Leaf sprig (Rotated 70deg) */
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cg transform='rotate(70 40 35)'%3E%3Cpath d='M15,55 Q40,48 65,15' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M35,42 Q28,32 42,26' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M48,30 Q55,38 44,44' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M28,49 Q20,42 30,35' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 140px 140px, 120px 120px, 110px 140px, 110px 140px, 110px 110px, 90px 90px, 110px 110px, 120px 100px;
-    background-position: 3% 5%, 95% 15%, 8% 85%, 92% 78%, 5% 42%, 93% 45%, 48% 10%, 52% 88%;
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cg transform='rotate(70 40 35)'%3E%3Cpath d='M15,55 Q40,48 65,15' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M35,42 Q28,32 42,26' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M48,30 Q55,38 44,44' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M28,49 Q20,42 30,35' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E"),
+        /* Row 3 (Repeats & extra messy layouts) */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg transform='rotate(-50 50 50)'%3E%3Cpath d='M50,15 L85,75 Q50,90 15,75Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='100' viewBox='0 0 80 100'%3E%3Cg transform='rotate(75 40 50)'%3E%3Cpath d='M30,15 L30,45 Q30,52 35,52 L35,85' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M50,15 L47,50 L50,52 L50,85' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg transform='rotate(-85 40 40)'%3E%3Cpath d='M40,15 C45,15 42,20 40,25 Q35,45 55,55 C65,60 55,68 45,65 Q25,60 30,35 Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cg transform='rotate(-120 40 35)'%3E%3Cpath d='M15,55 Q40,48 65,15' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 130px 130px, 110px 110px, 100px 130px, 100px 130px, 100px 100px, 80px 80px, 100px 100px, 110px 90px, 120px 120px, 100px 120px, 90px 90px, 100px 90px;
+    background-position: 3% 5%, 97% 12%, 8% 88%, 92% 82%, 4% 38%, 95% 42%, 45% 8%, 55% 92%, 22% 50%, 78% 50%, 48% 68%, 52% 32%;
     background-repeat: no-repeat;
 }
 
@@ -1401,6 +1400,12 @@ footer {
 
 /* Alternate illustration set for variety (messy / different angles & spots) */
 .illus-bg-alt::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.45;
     background-image:
         /* Burger sketch */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg transform='rotate(-22 50 50)'%3E%3Cpath d='M25,50 C25,30 75,30 75,50 L75,54 C75,56 25,56 25,54Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3Cpath d='M20,57 L80,57 L75,67 L25,67Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3Cpath d='M28,48 Q50,42 72,48' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cellipse cx='38' cy='52' rx='3' ry='1.5' fill='none' stroke='%23C9A96E' stroke-width='0.8'/%3E%3Cellipse cx='58' cy='52' rx='3' ry='1.5' fill='none' stroke='%23C9A96E' stroke-width='0.8'/%3E%3C/g%3E%3C/svg%3E"),
@@ -1417,9 +1422,14 @@ footer {
         /* Cupcake/Dessert */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg transform='rotate(30 45 45)'%3E%3Cpath d='M25,50 L65,50 L58,75 L32,75 Z' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M22,50 Q45,35 68,50 C75,40 65,25 45,25 C25,25 15,40 22,50' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3Ccircle cx='45' cy='20' r='3.5' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E"),
         /* Leaf sprig */
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cg transform='rotate(-60 40 35)'%3E%3Cpath d='M15,55 Q40,48 65,15' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M35,42 Q28,32 42,26' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M48,30 Q55,38 44,44' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M28,49 Q20,42 30,35' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 120px 120px, 140px 140px, 110px 140px, 110px 140px, 110px 110px, 90px 90px, 110px 110px, 120px 100px;
-    background-position: 95% 5%, 5% 18%, 92% 85%, 8% 75%, 90% 45%, 5% 48%, 52% 10%, 48% 88%;
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cg transform='rotate(-60 40 35)'%3E%3Cpath d='M15,55 Q40,48 65,15' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M35,42 Q28,32 42,26' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M48,30 Q55,38 44,44' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3Cpath d='M28,49 Q20,42 30,35' fill='none' stroke='%23C9A96E' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E"),
+        /* Extra Row */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg transform='rotate(60 50 50)'%3E%3Cpath d='M50,15 L85,75 Q50,90 15,75Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='100' viewBox='0 0 80 100'%3E%3Cg transform='rotate(-70 40 50)'%3E%3Cpath d='M30,15 L30,45 Q30,52 35,52 L35,85' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3Cpath d='M50,15 L47,50 L50,52 L50,85' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg transform='rotate(115 40 40)'%3E%3Cpath d='M40,15 C45,15 42,20 40,25 Q35,45 55,55 C65,60 55,68 45,65 Q25,60 30,35 Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cg transform='rotate(140 40 35)'%3E%3Cpath d='M15,55 Q40,48 65,15' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 130px 130px, 110px 110px, 100px 130px, 100px 130px, 100px 100px, 80px 80px, 100px 100px, 110px 90px, 120px 120px, 100px 120px, 90px 90px, 100px 90px;
+    background-position: 5% 5%, 95% 18%, 8% 75%, 90% 45%, 5% 48%, 52% 10%, 48% 88%, 92% 85%, 25% 50%, 75% 50%, 52% 68%, 48% 32%;
     background-repeat: no-repeat;
 }
 
