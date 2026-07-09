@@ -626,7 +626,7 @@ img {
     z-index: 5;
     width: 400px;
     height: 400px;
-    clip-path: path('M200,10 C300,-10 410,60 390,160 C420,260 370,370 270,390 C170,420 50,380 20,280 C-20,180 80,30 200,10 Z');
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     overflow: hidden;
     animation: heroFloat 6s ease-in-out infinite;
 }
@@ -1717,8 +1717,11 @@ footer {
     }
 
     /* Hide illustrations on mobile */
-    .illus-bg::before {
-        display: none;
+    /* Show illustrations on mobile but scaled down */
+    .illus-bg::before,
+    .illus-bg-alt::before {
+        opacity: 0.35;
+        background-size: 60px 60px, 50px 50px, 50px 60px, 50px 60px, 50px 50px, 40px 40px, 50px 50px, 50px 40px, 50px 50px, 50px 50px, 40px 40px, 45px 40px;
     }
 }
 
