@@ -1389,7 +1389,7 @@ footer {
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg transform='rotate(-85 40 40)'%3E%3Cpath d='M40,15 C45,15 42,20 40,25 Q35,45 55,55 C65,60 55,68 45,65 Q25,60 30,35 Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E"),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cg transform='rotate(-120 40 35)'%3E%3Cpath d='M15,55 Q40,48 65,15' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 130px 130px, 110px 110px, 100px 130px, 100px 130px, 100px 100px, 80px 80px, 100px 100px, 110px 90px, 120px 120px, 100px 120px, 90px 90px, 100px 90px;
-    background-position: 3% 5%, 97% 12%, 8% 88%, 92% 82%, 4% 38%, 95% 42%, 45% 8%, 55% 92%, 22% 50%, 78% 50%, 48% 68%, 52% 32%;
+    background-position: 1% 5%, 99% 10%, 3% 20%, 97% 25%, 2% 38%, 98% 42%, 4% 52%, 96% 60%, 2% 70%, 98% 78%, 3% 88%, 97% 92%;
     background-repeat: no-repeat;
 }
 
@@ -1429,7 +1429,7 @@ footer {
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg transform='rotate(115 40 40)'%3E%3Cpath d='M40,15 C45,15 42,20 40,25 Q35,45 55,55 C65,60 55,68 45,65 Q25,60 30,35 Z' fill='none' stroke='%23C9A96E' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E"),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cg transform='rotate(140 40 35)'%3E%3Cpath d='M15,55 Q40,48 65,15' fill='none' stroke='%23C9A96E' stroke-width='1.2'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 130px 130px, 110px 110px, 100px 130px, 100px 130px, 100px 100px, 80px 80px, 100px 100px, 110px 90px, 120px 120px, 100px 120px, 90px 90px, 100px 90px;
-    background-position: 5% 5%, 95% 18%, 8% 75%, 90% 45%, 5% 48%, 52% 10%, 48% 88%, 92% 85%, 25% 50%, 75% 50%, 52% 68%, 48% 32%;
+    background-position: 2% 8%, 98% 12%, 4% 24%, 96% 32%, 1% 45%, 99% 50%, 3% 62%, 97% 70%, 2% 80%, 98% 85%, 5% 92%, 95% 97%;
     background-repeat: no-repeat;
 }
 
