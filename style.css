@@ -139,28 +139,47 @@ ul {
     align-items: center;
 }
 
+.logo {
+    display: inline-block;
+    background-image: url('brush_stroke.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px 30px;
+}
+
 .logo-img {
-    height: 50px; /* Adjust based on your logo.png */
+    height: 40px;
     width: auto;
     object-fit: contain;
 }
 
 .inline-logo {
-    height: 1.4em;
+    height: 1.8em;
     width: auto;
     vertical-align: middle;
     display: inline-block;
     margin: 0 10px;
     object-fit: contain;
+    background-image: url('brush_stroke.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 6px 24px;
 }
 
 .inline-logo-body {
-    height: 1.1em;
+    height: 1.4em;
     width: auto;
     vertical-align: middle;
     display: inline-block;
     margin: 0 5px;
     object-fit: contain;
+    background-image: url('brush_stroke.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 4px 18px;
 }
 
 .nav-links {
