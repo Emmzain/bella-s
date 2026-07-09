@@ -139,47 +139,10 @@ ul {
     align-items: center;
 }
 
-.logo {
-    display: inline-block;
-    background-image: url('brush_stroke.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 10px 30px;
-}
-
 .logo-img {
-    height: 40px;
+    height: 50px; /* Adjust based on your logo.png */
     width: auto;
     object-fit: contain;
-}
-
-.inline-logo {
-    height: 1.8em;
-    width: auto;
-    vertical-align: middle;
-    display: inline-block;
-    margin: 0 10px;
-    object-fit: contain;
-    background-image: url('brush_stroke.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 6px 24px;
-}
-
-.inline-logo-body {
-    height: 1.4em;
-    width: auto;
-    vertical-align: middle;
-    display: inline-block;
-    margin: 0 5px;
-    object-fit: contain;
-    background-image: url('brush_stroke.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 4px 18px;
 }
 
 .nav-links {
@@ -273,7 +236,24 @@ ul {
     align-items: center;
 }
 
+.hero-logo-container {
+    background: rgba(74, 53, 40, 0.45); /* Dark Chocolate semi-transparent backdrop */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(217, 178, 110, 0.2);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
 
+.hero-logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
 
 .hero-title {
     font-size: 5rem;
@@ -350,19 +330,19 @@ ul {
     box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-.cat-png {
-    width: 80px;
-    height: 80px;
+.cat-icon-img {
+    width: 4.5rem;
+    height: 4.5rem;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 1rem;
     border: 2px solid var(--accent);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
-.category-card:hover .cat-png {
-    transform: scale(1.1);
+.category-card:hover .cat-icon-img {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .cat-name {
