@@ -1,0 +1,249 @@
+Website vibe:
+
+Luxury Restaurant
+Warm & Premium
+Dark + Elegant
+High-end food photography
+Smooth animations
+Glassmorphism sirf halka sa
+Rounded cards
+Premium typography
+Color Palette
+Forest Green #4F6F42
+Dark Chocolate #4A3528
+Cream #F8F1EB
+Gold Accent #D9B26E
+White Text
+
+Menu ki exact colors copy nahi karni, bas inspired palette use karni hai.
+
+Homepage Structure
+1) Hero
+
+Left
+
+Bella's
+
+Crafted With Love.
+Served With Passion.
+
+Fresh Burgers • Pizza • Steaks • Pasta
+
+Buttons
+
+Explore Menu
+Reserve Table
+
+Right
+
+Huge floating burger image
+
+Background
+
+Dark green gradient
+
+Leaves pattern
+
+Light smoke particles
+
+2) Categories
+
+8 cards
+
+🍔 Burgers
+
+🍕
+
+Pizza
+
+🥩
+
+Steaks
+
+🍝
+
+Pasta
+
+🍟
+
+Fries
+
+🥤
+
+Drinks
+
+🍨
+
+Desserts
+
+🌯
+
+Wraps
+
+Hover par image zoom.
+
+3) Signature Dishes
+
+Sirf
+
+Smash Beef
+Bella's Stuffed Pizza
+Tomahawk
+Alfredo Pasta
+Molten Lava
+
+Large premium cards.
+
+4) Why Bella's
+
+3 Cards
+
+Fresh Ingredients
+
+Master Chefs
+
+Fast Delivery
+
+5) Restaurant Experience
+
+Left
+
+Restaurant photo
+
+Right
+
+Story
+
+Numbers
+
+10+
+Years
+
+50+
+Menu Items
+
+4.8★
+
+Rating
+6) Best Sellers Carousel
+
+Auto scrolling
+
+Burger
+
+Pizza
+
+Shake
+
+Dessert
+
+7) Reviews
+
+Google style
+
+Cards
+
+8) CTA
+Hungry?
+
+Reserve Your Table Today.
+
+Large background image.
+
+9) Footer
+
+Location
+
+Phone
+
+Socials
+
+Hours
+
+Navbar
+
+Transparent
+
+Scroll par
+
+Glass effect
+
+Logo left
+
+Home
+
+Menu
+
+About
+
+Gallery
+
+Contact
+
+Button
+
+Reserve
+
+Animations
+
+Hero fade
+
+Cards lift
+
+Image zoom
+
+Mouse par parallax
+
+Floating food
+
+Smooth scrolling
+
+Counter animation
+
+Text reveal
+
+Fonts
+
+Heading
+
+Cormorant Garamond
+
+Body
+
+Poppins
+
+Ye combination bohot premium lagta hai.
+
+Images
+
+Professional food photography
+
+Dark shadows
+
+Warm lighting
+
+No cartoon images.
+
+UI Style
+
+Agar Bite Me ka UI 8/10 hai, to Bella's ka target 10/10 hona chahiye.
+
+Reference ke liye inspiration:
+
+Black Tap Burger
+Salt Bae Restaurants
+Five Guys (layout inspiration only)
+STK Steakhouse
+Nobu (premium spacing & elegance)
+Jo cheez Bella's owner ko sab se zyada impress karegi
+
+Main menu page ki jagah interactive homepage banaunga jahan:
+
+Hero ke niche categories hon.
+Category click karte hi products filter ho jayein (page reload ke baghair).
+Har product card par Add to Cart ki jagah View Dish ho (kyun ke ye demo hai).
+Mouse hover par card 3D tilt kare.
+Hero image halki floating animation kare.
+Scroll par sections cinematic tareeqe se reveal hon.
+
+Is tarah owner ko lagega ke ye sirf website nahi, ek premium restaurant brand experience hai. Ye approach aap ki current Bite Me website se bhi zyada premium aur memorable impression create karegi.
