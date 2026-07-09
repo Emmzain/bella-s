@@ -1,121 +1,140 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navbar Glassmorphism on Scroll
+
+    // ═══════════ 1. NAVBAR SCROLL EFFECT ═══════════
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // 2. Cinematic Section Reveals
+    // ═══════════ 2. MOBILE MENU TOGGLE ═══════════
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-open');
+            mobileToggle.classList.toggle('active');
+        });
+    }
+
+    // ═══════════ 3. CINEMATIC SECTION REVEALS ═══════════
     const revealElements = document.querySelectorAll('.section-reveal');
-    
+
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                
-                // If this section has fade-in-up children, trigger them
-                const fadeElements = entry.target.querySelectorAll('.fade-in-up');
-                fadeElements.forEach(el => el.classList.add('visible'));
-                
-                // If this section has counters, trigger them
+
+                // Trigger fade-in-up children
+                const fadeEls = entry.target.querySelectorAll('.fade-in-up');
+                fadeEls.forEach(el => el.classList.add('visible'));
+
+                // Trigger counter animations
                 const counters = entry.target.querySelectorAll('.counter');
                 counters.forEach(counter => {
-                    const updateCount = () => {
-                        const target = +counter.getAttribute('data-target');
-                        const count = +counter.innerText;
-                        const inc = target / 50; // Adjust speed
-
-                        if (count < target) {
-                            counter.innerText = Math.ceil(count + inc);
-                            setTimeout(updateCount, 40);
+                    const target = +counter.getAttribute('data-target');
+                    const animate = () => {
+                        const current = +counter.innerText;
+                        const increment = target / 60;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current + increment);
+                            requestAnimationFrame(animate);
                         } else {
                             counter.innerText = target;
                         }
                     };
-                    updateCount();
-                    // Remove class so it doesn't trigger again
-                    counter.classList.remove('counter'); 
+                    animate();
+                    counter.classList.remove('counter');
                 });
 
                 observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.15
-    });
+    }, { threshold: 0.12 });
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Trigger hero animations immediately
+    // Trigger hero immediately
     setTimeout(() => {
         const hero = document.querySelector('.hero');
         if (hero) {
             hero.classList.add('active');
-            const fadeElements = hero.querySelectorAll('.fade-in-up');
-            fadeElements.forEach(el => el.classList.add('visible'));
+            hero.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('visible'));
         }
     }, 100);
 
-    // 3. 3D Tilt Effect on Dish Cards
+    // ═══════════ 4. 3D TILT EFFECT ═══════════
     const tiltCards = document.querySelectorAll('.tilt-card');
-    
+
     tiltCards.forEach(card => {
         card.addEventListener('mousemove', e => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            
-            const tiltX = (y - centerY) / 15;
-            const tiltY = (centerX - x) / 15;
-            
+            const tiltX = (y - centerY) / 18;
+            const tiltY = (centerX - x) / 18;
             card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
         });
-        
+
         card.addEventListener('mouseleave', () => {
-            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
         });
     });
 
-    // 4. Parallax Effect on Hero Background
+    // ═══════════ 5. HERO PARALLAX ═══════════
     const hero = document.querySelector('.hero');
-    const heroBg = document.querySelector('.hero-bg');
-    const heroImg = document.querySelector('.hero-burger');
+    const heroOverlay = document.querySelector('.hero-overlay');
+    const heroImg = document.querySelector('.hero-food-img');
 
     if (hero) {
         hero.addEventListener('mousemove', (e) => {
-            const x = (window.innerWidth / 2 - e.pageX) / 25;
-            const y = (window.innerHeight / 2 - e.pageY) / 25;
-            
-            if(heroBg) heroBg.style.transform = `translate(${x}px, ${y}px)`;
-            if(heroImg) {
-                // Keep the floating animation but add slight parallax
-                heroImg.style.transform = `translate(${-x*1.5}px, ${-y*1.5}px)`;
-            }
+            const x = (window.innerWidth / 2 - e.pageX) / 30;
+            const y = (window.innerHeight / 2 - e.pageY) / 30;
+
+            if (heroOverlay) heroOverlay.style.transform = `translate(${x}px, ${y}px)`;
+            if (heroImg) heroImg.style.transform = `translate(${-x * 1.5}px, ${-y * 1.5}px)`;
         });
-        
+
         hero.addEventListener('mouseleave', () => {
-            if(heroBg) heroBg.style.transform = `translate(0px, 0px)`;
-            if(heroImg) heroImg.style.transform = `translate(0px, 0px)`;
+            if (heroOverlay) heroOverlay.style.transform = 'translate(0, 0)';
+            if (heroImg) heroImg.style.transform = 'translate(0, 0)';
         });
     }
 
-    // Smooth Scrolling for Anchors
+    // ═══════════ 6. SMOOTH SCROLL ═══════════
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 window.scrollTo({
-                    top: target.offsetTop - 80, // adjust for navbar height
+                    top: target.offsetTop - 80,
                     behavior: 'smooth'
                 });
+                // Close mobile menu if open
+                if (navLinks) navLinks.classList.remove('mobile-open');
+                if (mobileToggle) mobileToggle.classList.remove('active');
+            }
+        });
+    });
+
+    // ═══════════ 7. ACTIVE NAV LINK ON SCROLL ═══════════
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop - 100;
+            if (window.scrollY >= top) {
+                current = section.getAttribute('id');
+            }
+        });
+        navAnchors.forEach(a => {
+            a.classList.remove('nav-active');
+            if (a.getAttribute('href') === '#' + current) {
+                a.classList.add('nav-active');
             }
         });
     });

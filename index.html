@@ -3,147 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella's | Luxury Restaurant</title>
-    <meta name="description" content="Experience premium dining at Bella's. Fresh burgers, pizza, steaks, and pasta.">
+    <title>Bella's | Burgers • Pizza • Steaks • Pasta & More</title>
+    <meta name="description" content="Experience premium dining at Bella's – Haripur's finest restaurant. Fresh burgers, pizza, steaks, pasta and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <!-- Navbar -->
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
     <nav id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="logo.png" alt="Bella's Logo" class="logo-img">
+                <img src="logo.png" alt="Bella's" class="logo-img">
             </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-active">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="btn-primary reserve-btn">Reserve</button>
-            <div class="mobile-menu-btn">
-                <i data-lucide="menu"></i>
-            </div>
+            <a href="#contact" class="btn-reserve">Reserve a Table</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ═══════════════ HERO ═══════════════ -->
     <header id="home" class="hero section-reveal">
-        <div class="hero-bg">
-            <div class="gradient-overlay"></div>
-            <div class="particles" id="particles"></div>
-        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" id="hero-particles"></div>
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title fade-in-up delay-1">Crafted With Love.<br>Served With Passion.</h1>
-                <p class="hero-desc fade-in-up delay-2">Fresh Burgers &bull; Pizza &bull; Steaks &bull; Pasta</p>
-                <div class="hero-buttons fade-in-up delay-3">
+            <div class="hero-left">
+                <div class="hero-badge fade-in-up">EST. 2014 • HARIPUR</div>
+                <h1 class="hero-title fade-in-up delay-1">
+                    Crafted With Love.<br>
+                    <span class="accent-text">Served With Passion.</span>
+                </h1>
+                <p class="hero-tagline fade-in-up delay-2">Burgers &bull; Pizza &bull; Steaks &bull; Pasta & More</p>
+                <div class="hero-cta fade-in-up delay-3">
                     <a href="#menu" class="btn-primary">Explore Menu</a>
-                    <a href="#contact" class="btn-secondary">Reserve Table</a>
+                    <a href="#contact" class="btn-outline">Reserve Table</a>
                 </div>
             </div>
-            <div class="hero-image-wrapper fade-in-up delay-2">
-                <img src="burger.png" alt="Premium Burger" class="hero-burger floating-img" id="hero-img">
+            <div class="hero-right fade-in-up delay-2">
+                <div class="hero-img-frame">
+                    <img src="burger.png" alt="Signature Burger" class="hero-food-img" id="hero-img">
+                </div>
+                <div class="hero-floating-badge">
+                    <span class="hf-number">4.8</span>
+                    <span class="hf-stars">★★★★★</span>
+                    <span class="hf-text">Google Rating</span>
+                </div>
             </div>
+        </div>
+        <div class="hero-scroll-indicator fade-in-up delay-3">
+            <div class="scroll-line"></div>
+            <span>Scroll Down</span>
         </div>
     </header>
 
-    <!-- Categories Section -->
+    <!-- ═══════════════ CATEGORIES ═══════════════ -->
     <section class="categories section-reveal">
         <div class="container">
-            <div class="category-grid">
-                <div class="category-card"><img src="burger.png" alt="Burgers" class="cat-icon-img"><span class="cat-name">Burgers</span></div>
-                <div class="category-card"><img src="pizza.png" alt="Pizza" class="cat-icon-img"><span class="cat-name">Pizza</span></div>
-                <div class="category-card"><img src="steak.png" alt="Steaks" class="cat-icon-img"><span class="cat-name">Steaks</span></div>
-                <div class="category-card"><img src="pasta.png" alt="Pasta" class="cat-icon-img"><span class="cat-name">Pasta</span></div>
-                <div class="category-card"><img src="fries.png" alt="Fries" class="cat-icon-img"><span class="cat-name">Fries</span></div>
-                <div class="category-card"><img src="drinks.png" alt="Drinks" class="cat-icon-img"><span class="cat-name">Drinks</span></div>
-                <div class="category-card"><img src="dessert.png" alt="Desserts" class="cat-icon-img"><span class="cat-name">Desserts</span></div>
-                <div class="category-card"><img src="wraps.png" alt="Wraps" class="cat-icon-img"><span class="cat-name">Wraps</span></div>
+            <div class="categories-track">
+                <div class="cat-card">
+                    <div class="cat-img-wrap"><img src="burger.png" alt="Burgers"></div>
+                    <h4>Burgers</h4>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-img-wrap"><img src="pizza.png" alt="Pizza"></div>
+                    <h4>Pizza</h4>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-img-wrap"><img src="steak.png" alt="Steaks"></div>
+                    <h4>Steaks</h4>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-img-wrap"><img src="pasta.png" alt="Pasta"></div>
+                    <h4>Pasta</h4>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-img-wrap"><img src="fries.png" alt="Fries"></div>
+                    <h4>Fries</h4>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-img-wrap"><img src="drinks.png" alt="Drinks"></div>
+                    <h4>Drinks</h4>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-img-wrap"><img src="dessert.png" alt="Desserts"></div>
+                    <h4>Desserts</h4>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-img-wrap"><img src="wraps.png" alt="Wraps"></div>
+                    <h4>Wraps</h4>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Signature Dishes -->
-    <section id="menu" class="signature-dishes section-reveal">
+    <!-- ═══════════════ SIGNATURE DISHES ═══════════════ -->
+    <section id="menu" class="signature section-reveal">
         <div class="container">
-            <div class="section-header">
+            <div class="section-head">
+                <span class="section-tag">Our Specialties</span>
                 <h2>Signature Dishes</h2>
-                <p>Taste the perfection in every bite</p>
+                <div class="head-line"></div>
             </div>
-            <div class="dishes-grid" id="dishes-grid">
-                <!-- Dish Card 1 -->
-                <div class="dish-card tilt-card">
-                    <div class="dish-img-wrapper">
-                        <img src="burger.png" alt="Smash Beef" class="dish-img img-burger">
-                    </div>
-                    <div class="dish-info">
+            <div class="sig-grid">
+                <div class="sig-card tilt-card">
+                    <div class="sig-img"><img src="burger.png" alt="Smash Beef"></div>
+                    <div class="sig-body">
+                        <div class="sig-tag">Best Seller</div>
                         <h3>Smash Beef</h3>
-                        <p>Double smashed patties, melted cheddar, signature Bella sauce.</p>
-                        <div class="dish-bottom">
-                            <span class="price">$14.99</span>
-                            <button class="btn-view">View Dish</button>
+                        <p>Double smashed patties with melted cheddar and signature Bella's sauce</p>
+                        <div class="sig-footer">
+                            <span class="sig-price">Rs 695</span>
+                            <button class="btn-dish">View Dish</button>
                         </div>
                     </div>
                 </div>
-                <!-- Dish Card 2 -->
-                <div class="dish-card tilt-card">
-                    <div class="dish-img-wrapper">
-                        <img src="pizza.png" alt="Bella's Stuffed Pizza" class="dish-img img-pizza">
-                    </div>
-                    <div class="dish-info">
-                        <h3>Bella's Stuffed Pizza</h3>
-                        <p>Cheese stuffed crust, premium pepperoni, fresh mozzarella.</p>
-                        <div class="dish-bottom">
-                            <span class="price">$22.99</span>
-                            <button class="btn-view">View Dish</button>
+                <div class="sig-card tilt-card">
+                    <div class="sig-img"><img src="pizza.png" alt="Bella's Stuffed Pizza"></div>
+                    <div class="sig-body">
+                        <div class="sig-tag">Chef's Pick</div>
+                        <h3>Bella's Stuffed</h3>
+                        <p>Cheese stuffed crust with premium toppings, fresh mozzarella and secret spice blend</p>
+                        <div class="sig-footer">
+                            <span class="sig-price">Rs 1,795</span>
+                            <button class="btn-dish">View Dish</button>
                         </div>
                     </div>
                 </div>
-                <!-- Dish Card 3 -->
-                <div class="dish-card tilt-card">
-                    <div class="dish-img-wrapper">
-                        <img src="steak.png" alt="Tomahawk" class="dish-img img-steak">
-                    </div>
-                    <div class="dish-info">
-                        <h3>Tomahawk Steak</h3>
-                        <p>32oz premium cut, herb butter, rosemary, slow-roasted.</p>
-                        <div class="dish-bottom">
-                            <span class="price">$89.99</span>
-                            <button class="btn-view">View Dish</button>
+                <div class="sig-card tilt-card">
+                    <div class="sig-img"><img src="steak.png" alt="Tomahawk"></div>
+                    <div class="sig-body">
+                        <div class="sig-tag">Premium</div>
+                        <h3>Tomahawk</h3>
+                        <p>Premium cut beef tomahawk, herb butter, rosemary, slow-roasted to perfection</p>
+                        <div class="sig-footer">
+                            <span class="sig-price">Rs 2,595</span>
+                            <button class="btn-dish">View Dish</button>
                         </div>
                     </div>
                 </div>
-                <!-- Dish Card 4 -->
-                <div class="dish-card tilt-card">
-                    <div class="dish-img-wrapper">
-                        <img src="pasta.png" alt="Alfredo Pasta" class="dish-img img-pasta">
-                    </div>
-                    <div class="dish-info">
-                        <h3>Alfredo Pasta</h3>
-                        <p>Creamy parmesan sauce, grilled chicken, fresh parsley.</p>
-                        <div class="dish-bottom">
-                            <span class="price">$18.99</span>
-                            <button class="btn-view">View Dish</button>
+                <div class="sig-card tilt-card">
+                    <div class="sig-img"><img src="pasta.png" alt="Creamy Alfredo"></div>
+                    <div class="sig-body">
+                        <div class="sig-tag">Fan Favorite</div>
+                        <h3>Creamy Alfredo</h3>
+                        <p>Rich parmesan alfredo sauce, grilled chicken, fresh herbs and parsley</p>
+                        <div class="sig-footer">
+                            <span class="sig-price">Rs 995</span>
+                            <button class="btn-dish">View Dish</button>
                         </div>
                     </div>
                 </div>
-                <!-- Dish Card 5 -->
-                <div class="dish-card tilt-card">
-                    <div class="dish-img-wrapper">
-                        <img src="dessert.png" alt="Molten Lava" class="dish-img img-dessert">
-                    </div>
-                    <div class="dish-info">
+                <div class="sig-card tilt-card">
+                    <div class="sig-img"><img src="dessert.png" alt="Molten Lava"></div>
+                    <div class="sig-body">
+                        <div class="sig-tag">Sweet Tooth</div>
                         <h3>Molten Lava</h3>
-                        <p>Rich chocolate cake with a gooey center, vanilla bean ice cream.</p>
-                        <div class="dish-bottom">
-                            <span class="price">$9.99</span>
-                            <button class="btn-view">View Dish</button>
+                        <p>Rich chocolate cake with a gooey center, served with vanilla ice cream</p>
+                        <div class="sig-footer">
+                            <span class="sig-price">Rs 545</span>
+                            <button class="btn-dish">View Dish</button>
                         </div>
                     </div>
                 </div>
@@ -151,157 +180,211 @@
         </div>
     </section>
 
-    <!-- Why Bella's -->
+    <!-- ═══════════════ WHY BELLA'S ═══════════════ -->
     <section id="about" class="why-bellas section-reveal">
         <div class="container">
-            <div class="section-header">
+            <div class="section-head light">
+                <span class="section-tag">The Bella's Promise</span>
                 <h2>Why Bella's</h2>
-                <p>The secret behind our extraordinary flavors</p>
+                <div class="head-line"></div>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i data-lucide="leaf" class="feature-icon"></i>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i data-lucide="leaf"></i></div>
                     <h3>Fresh Ingredients</h3>
                     <p>Locally sourced, organic, and always fresh. We never compromise on quality.</p>
                 </div>
-                <div class="feature-card">
-                    <i data-lucide="chef-hat" class="feature-icon"></i>
+                <div class="why-card">
+                    <div class="why-icon"><i data-lucide="chef-hat"></i></div>
                     <h3>Master Chefs</h3>
-                    <p>Our culinary experts bring years of experience from top Michelin-starred restaurants.</p>
+                    <p>Our culinary experts bring years of experience crafting unforgettable dishes.</p>
                 </div>
-                <div class="feature-card">
-                    <i data-lucide="bike" class="feature-icon"></i>
+                <div class="why-card">
+                    <div class="why-icon"><i data-lucide="bike"></i></div>
                     <h3>Fast Delivery</h3>
-                    <p>Hot and fresh right to your doorstep, maintaining the perfect temperature and taste.</p>
+                    <p>Hot and fresh right to your doorstep. Taste preserved, every single time.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Restaurant Experience -->
-    <section class="experience section-reveal">
-        <div class="container exp-container">
-            <div class="exp-left">
-                <img src="interior.png" alt="Restaurant Interior" class="exp-img img-interior">
-            </div>
-            <div class="exp-right">
-                <h2>A Dining Experience Like No Other</h2>
-                <p>Since 2014, Bella's has been redefining the culinary landscape with our commitment to excellence. Every dish is a masterpiece, crafted with passion and precision to offer you an unforgettable dining journey.</p>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number counter" data-target="10">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Years</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number counter" data-target="50">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Menu Items</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number counter" data-target="4">0</span><span class="stat-plus">.8★</span>
-                        <span class="stat-label">Rating</span>
+    <!-- ═══════════════ EXPERIENCE ═══════════════ -->
+    <section id="gallery" class="experience section-reveal">
+        <div class="container">
+            <div class="exp-grid">
+                <div class="exp-images">
+                    <img src="ambiance.png" alt="Bella's Restaurant Interior" class="exp-main-img">
+                    <div class="exp-img-accent"></div>
+                </div>
+                <div class="exp-content">
+                    <span class="section-tag">Our Story</span>
+                    <h2>A Dining Experience<br>Like No Other</h2>
+                    <p>Since 2014, Bella's has been redefining the culinary landscape of Haripur. Every dish is a masterpiece, crafted with passion and precision to offer you an unforgettable dining journey.</p>
+                    <div class="exp-stats">
+                        <div class="stat">
+                            <span class="stat-num counter" data-target="10">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Years of Excellence</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num counter" data-target="50">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Menu Items</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num counter" data-target="4">0</span><span class="stat-suffix">.8★</span>
+                            <span class="stat-label">Google Rating</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Best Sellers Carousel -->
-    <section class="carousel-section section-reveal">
-        <div class="section-header">
+    <!-- ═══════════════ BEST SELLERS CAROUSEL ═══════════════ -->
+    <section class="bestsellers section-reveal">
+        <div class="section-head">
+            <span class="section-tag">Don't Miss Out</span>
             <h2>Best Sellers</h2>
+            <div class="head-line"></div>
         </div>
-        <div class="carousel-container">
+        <div class="carousel-wrap">
             <div class="carousel-track">
-                <div class="carousel-item"><img src="burger.png" alt="Burger" class="img-burger"><h4>Classic Burger</h4></div>
-                <div class="carousel-item"><img src="pizza.png" alt="Pizza" class="img-pizza"><h4>Pepperoni Pizza</h4></div>
-                <div class="carousel-item"><img src="dessert.png" alt="Shake" class="img-shake"><h4>Oreo Shake</h4></div>
-                <div class="carousel-item"><img src="dessert.png" alt="Dessert" class="img-dessert"><h4>Lava Cake</h4></div>
-                <!-- Duplicate for seamless scroll -->
-                <div class="carousel-item"><img src="burger.png" alt="Burger" class="img-burger"><h4>Classic Burger</h4></div>
-                <div class="carousel-item"><img src="pizza.png" alt="Pizza" class="img-pizza"><h4>Pepperoni Pizza</h4></div>
-                <div class="carousel-item"><img src="dessert.png" alt="Shake" class="img-shake"><h4>Oreo Shake</h4></div>
-                <div class="carousel-item"><img src="dessert.png" alt="Dessert" class="img-dessert"><h4>Lava Cake</h4></div>
+                <div class="carousel-slide">
+                    <img src="burger.png" alt="Smash Beef Burger">
+                    <h4>Smash Beef</h4>
+                    <span>Rs 695</span>
+                </div>
+                <div class="carousel-slide">
+                    <img src="pizza.png" alt="Bella's Stuffed Pizza">
+                    <h4>Bella's Stuffed</h4>
+                    <span>Rs 1,795</span>
+                </div>
+                <div class="carousel-slide">
+                    <img src="steak.png" alt="Tomahawk Steak">
+                    <h4>Tomahawk</h4>
+                    <span>Rs 2,595</span>
+                </div>
+                <div class="carousel-slide">
+                    <img src="dessert.png" alt="Molten Lava">
+                    <h4>Molten Lava</h4>
+                    <span>Rs 545</span>
+                </div>
+                <!-- Duplicates for infinite scroll -->
+                <div class="carousel-slide">
+                    <img src="burger.png" alt="Smash Beef Burger">
+                    <h4>Smash Beef</h4>
+                    <span>Rs 695</span>
+                </div>
+                <div class="carousel-slide">
+                    <img src="pizza.png" alt="Bella's Stuffed Pizza">
+                    <h4>Bella's Stuffed</h4>
+                    <span>Rs 1,795</span>
+                </div>
+                <div class="carousel-slide">
+                    <img src="steak.png" alt="Tomahawk Steak">
+                    <h4>Tomahawk</h4>
+                    <span>Rs 2,595</span>
+                </div>
+                <div class="carousel-slide">
+                    <img src="dessert.png" alt="Molten Lava">
+                    <h4>Molten Lava</h4>
+                    <span>Rs 545</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews -->
+    <!-- ═══════════════ REVIEWS ═══════════════ -->
     <section class="reviews section-reveal">
         <div class="container">
-            <div class="section-header">
-                <h2>What They Say</h2>
+            <div class="section-head">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Guests Say</h2>
+                <div class="head-line"></div>
             </div>
             <div class="reviews-grid">
                 <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"The best smash burger I've ever had. The ambiance is absolutely premium. Will definitely come back!"</p>
                     <div class="reviewer">
-                        <div class="avatar">S</div>
+                        <div class="reviewer-avatar">S</div>
                         <div>
-                            <h4>Sarah Johnson</h4>
-                            <div class="stars">★★★★★</div>
+                            <h4>Sarah Khan</h4>
+                            <span>Google Review</span>
                         </div>
                     </div>
-                    <p>"The best smash burger I've ever had. The ambiance is absolutely premium. Highly recommended!"</p>
                 </div>
                 <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Bella's Stuffed Pizza is a game changer. The quality of ingredients really shines through every bite."</p>
                     <div class="reviewer">
-                        <div class="avatar">M</div>
+                        <div class="reviewer-avatar">A</div>
                         <div>
-                            <h4>Michael Chen</h4>
-                            <div class="stars">★★★★★</div>
+                            <h4>Ahmed Malik</h4>
+                            <span>Google Review</span>
                         </div>
                     </div>
-                    <p>"Bella's Stuffed Pizza is a game changer. The quality of ingredients really shines through."</p>
                 </div>
                 <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Exceptional service and mouth-watering steaks. Haripur's finest dining experience without a doubt."</p>
                     <div class="reviewer">
-                        <div class="avatar">E</div>
+                        <div class="reviewer-avatar">F</div>
                         <div>
-                            <h4>Emily Davis</h4>
-                            <div class="stars">★★★★★</div>
+                            <h4>Fatima Ali</h4>
+                            <span>Google Review</span>
                         </div>
                     </div>
-                    <p>"Exceptional service and mouth-watering steaks. A true luxury dining experience."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta section-reveal">
-        <div class="cta-bg"></div>
+    <!-- ═══════════════ CTA ═══════════════ -->
+    <section id="contact" class="cta section-reveal">
+        <div class="cta-overlay"></div>
         <div class="cta-content">
             <h2>Hungry?</h2>
-            <p>Reserve Your Table Today.</p>
-            <button class="btn-primary btn-large">Book Now</button>
+            <p>Reserve Your Table Today</p>
+            <div class="cta-buttons">
+                <a href="tel:03361131166" class="btn-primary btn-lg">
+                    <i data-lucide="phone"></i> Call Now
+                </a>
+                <a href="#" class="btn-outline btn-lg">Book Online</a>
+            </div>
+            <div class="cta-info">
+                <span><i data-lucide="map-pin"></i> Akhtar Nawaz Khan Plaza, Mandi Mor, G.T Road Haripur</span>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ═══════════════ FOOTER ═══════════════ -->
     <footer>
-        <div class="container footer-container">
-            <div class="footer-col">
+        <div class="container footer-grid">
+            <div class="footer-brand">
                 <img src="logo.png" alt="Bella's Logo" class="footer-logo">
                 <p>Crafted With Love. Served With Passion.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
             </div>
             <div class="footer-col">
                 <h4>Location</h4>
-                <p>123 Culinary Boulevard</p>
-                <p>Food District, NY 10001</p>
+                <p>Akhtar Nawaz Khan Plaza</p>
+                <p>Mandi Mor, G.T Road</p>
+                <p>Haripur</p>
             </div>
             <div class="footer-col">
                 <h4>Hours</h4>
-                <p>Mon - Fri: 11am - 10pm</p>
-                <p>Sat - Sun: 10am - 11pm</p>
+                <p>Mon – Fri: 11am – 10pm</p>
+                <p>Sat – Sun: 10am – 11pm</p>
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <p>(555) 123-4567</p>
-                <p>info@bellasrestaurant.com</p>
-                <div class="socials">
-                    <i data-lucide="instagram"></i>
-                    <i data-lucide="facebook"></i>
-                    <i data-lucide="twitter"></i>
-                </div>
+                <p>0336-1131166</p>
+                <p>0336-1131177</p>
+                <p>bellasrestaurant02</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -310,8 +393,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
