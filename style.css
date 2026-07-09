@@ -145,6 +145,24 @@ ul {
     object-fit: contain;
 }
 
+.inline-logo {
+    height: 1.4em;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 10px;
+    object-fit: contain;
+}
+
+.inline-logo-body {
+    height: 1.1em;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 5px;
+    object-fit: contain;
+}
+
 .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -236,12 +254,7 @@ ul {
     align-items: center;
 }
 
-.hero-subtitle {
-    color: var(--accent);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-style: italic;
-}
+
 
 .hero-title {
     font-size: 5rem;
@@ -318,16 +331,19 @@ ul {
     box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-.cat-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    color: var(--accent);
+.cat-png {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 1rem;
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
 }
 
-.category-card:hover .cat-icon {
-    transform: scale(1.2);
+.category-card:hover .cat-png {
+    transform: scale(1.1);
 }
 
 .cat-name {
